@@ -8,6 +8,7 @@ import { AuthService } from './auth.service';
 })
 export class AppComponent {
   title = 'assessment2';
+  isCollapsed:boolean
   constructor(private auth: AuthService){}
 
   isLogginIn():boolean{
@@ -17,4 +18,5 @@ export class AppComponent {
   logout(){
     this.auth.logout()
   }
+
 }
