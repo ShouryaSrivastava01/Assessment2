@@ -1,0 +1,13 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6" *ngFor="let user of users" >
+            <div class="card mb-3" routerLink="/customer/{{user.id}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{user.name}}</h5>
+                    <p class="card-text">{{user.phone}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
