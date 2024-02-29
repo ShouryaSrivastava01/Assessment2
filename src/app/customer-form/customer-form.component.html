@@ -20,7 +20,7 @@
             <input type="text" class="form-control" id="address" name="address" ngModel required #address="ngModel">
             <span class="alert" *ngIf="!address.valid && address.touched">Please enter valid value</span>
         </div>
-        <button class="btn btn-primary" type="submit" [disabled]="!userForm.valid">Add Customer</button>
+        <button class="btn btn-primary my-2" type="submit" [disabled]="!userForm.valid">Add Customer</button>
     </form>
 </div>
 
