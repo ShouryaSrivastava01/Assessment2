@@ -26,6 +26,11 @@ export class CustomerFormComponent {
       address : form.value.address
     }
 
+    if(!this.validation.validateName(user.name)){
+      this.errorMessage="Invalid Name Format"
+      return false
+    }
+    
     if(!this.validation.validateEmail(user.email)){
       this.errorMessage = "Invalid Email Format"
       return false;
@@ -34,6 +39,10 @@ export class CustomerFormComponent {
       this.errorMessage = "Invalid Phone Number"
       return false;
     } 
+    if(!this.validation.validateAddress(user.address)){
+      this.errorMessage="Invalid Address Format"
+      return false
+    }
     
 
     this.customer.addUser(user)
