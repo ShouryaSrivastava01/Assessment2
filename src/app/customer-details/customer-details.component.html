@@ -1,12 +1,15 @@
 <div class="container">
     <div class="card">
         <div class="card-body">
-            <h5 class="card-title">Name : {{user.name}}</h5>
+            <h5 class="card-title">Name : {{user.name | uppercase}}</h5>
             <p class="card-text">Email : {{user.email}}</p>
             <p class="card-text">Phone No : {{user.phone}}</p>
-            <p class="card-text">Address : {{user.address}}</p>
+            <p class="card-text">Address : {{user.address | uppercase}}</p>
         </div>
     </div>
-    <button class="btn btn-primary" routerLink="/customer-edit/{{user.id}}">Edit User</button>
-    <button class="btn btn-danger" *ngIf="isAdmin()" (click)="onDelete(user.id)">Delete</button>
+    <div>
+
+        <button class="btn btn-primary my-2" routerLink="/customer-edit/{{user.id}}">Edit User</button>
+        <button class="btn btn-danger mx-2" *ngIf="isAdmin()" (click)="onDelete(user.id)">Delete</button>
+    </div>
 </div>

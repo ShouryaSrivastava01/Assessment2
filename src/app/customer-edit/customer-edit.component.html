@@ -21,7 +21,7 @@
             <input type="text" class="form-control" id="address" name="address" [(ngModel)]="user.address" required ngModel #address="ngModel">
             <span class="alert" *ngIf="!address.valid && address.touched">Please enter valid value</span>
         </div>
-        <button class="btn btn-primary" type="submit"[disabled]="!editForm.valid">Update</button>
+        <button class="btn btn-primary my-2" type="submit"[disabled]="!editForm.valid">Update</button>
     </form>
 </div>
 

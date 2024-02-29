@@ -12,7 +12,8 @@ const routes: Routes = [
   {path: 'customer', component: CustomerListComponent},
   {path: 'customer/:id', component: CustomerDetailsComponent},
   {path: 'customer-edit/:id', component:CustomerEditComponent},
-  {path:'login', component: LoginComponent}
+  {path:'login', component: LoginComponent},
+  {path:'**', redirectTo:'customer'}
 ];
 
 @NgModule({
